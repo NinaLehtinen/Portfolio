@@ -38,8 +38,15 @@ nav {
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    /* Lisätty transition pehmeää efektiä varten */
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    transition: color 0.2s ease; /* Vain värille transition, shadow on heti päällä */
+    display: inline-block; /* Varmistaa, että linkki käyttäytyy vakaasti */
+}
+
+/* Hover-efekti: Musta väri ja "valelivevointi" shadowilla */
+.nav-right a:hover {
+    color: #000000;
+    /* Luo lihavoinnin ilman leveyden muutosta */
+    text-shadow: 0.5px 0 0 #000, -0.5px 0 0 #000; 
 }
 
 /* UUSI: Hover-efekti menu-nappeihin */
