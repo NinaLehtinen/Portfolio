@@ -56,12 +56,13 @@ nav {
 h1 {
     font-family: "salted", sans-serif;
     font-weight: 400;
-    font-size: clamp(60px, 10vw, 100px);
+    font-size: clamp(50px, 7vw, 90px);
     margin: 0;
     line-height: 0.85;
     margin-bottom: 20px;
     text-transform: uppercase;
     white-space: nowrap;
+    overflow: visible;
 }
 
 .hero-sub {
