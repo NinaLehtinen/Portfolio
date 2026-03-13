@@ -1,0 +1,108 @@
+:root {
+    --bg-color: #90cce2;
+    --btn-color: #fcff00;
+    --btn-hover: #ff7cb3;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    color: white;
+    font-family: 'Gill Sans MT Condensed', sans-serif; /* Korvike */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+.brand-text {
+    font-family: 'Oswald', sans-serif; /* Tähän vaihtaisit Salted */
+    font-size: 1.5rem;
+}
+
+.nav-right {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+    font-family: 'Oswald', sans-serif; /* Tähän vaihtaisit Salted */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--btn-color);
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--btn-hover);
+    transform: scale(1.1);
+}
+
+/* Tabit Nina-sivulle */
+.tabs-container {
+    background: white;
+    color: black;
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab-link {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.tab-link.active {
+    background: #eee;
+    font-weight: bold;
+}
+
+.contact-tab {
+    background-color: #f37021;
+    color: white;
+    border: none;
+}
+
+.tab-content {
+    display: none;
+    padding-top: 20px;
+}
+
+.tab-content.show {
+    display: block;
+}
