@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nina Lehtinen | Visuaalinen moniosaaja</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <img src="logo-placeholder.png" alt="Logo" class="home-icon">
+        <span class="brand-text">VISUAALISEN VIESTINNÄN MONIOSAAJA</span>
+    </div>
+    <ul class="nav-right">
+        <li><a href="#animaatio">ANIMAATIO</a></li>
+        <li><a href="#kuvitus">KUVITUS</a></li>
+        <li><a href="#nina">NINA</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>NINA LEHTINEN</h1>
+        <p class="hero-sub">Terve! Olen visuaalinen tarinankertoja ja animaattori Oulusta. Rakastan luoda sympaattisen hupsuja hahmoja ja tuoda heidän persoonat eloon liikkeen avulla...</p>
+        <a href="https://www.youtube.com/watch?v=oVaMvVW3-Fo" target="_blank" class="cta-button">KATSO SHOWREEL</a>
+    </div>
+    <div class="hero-image">
+        <img src="hahmo-placeholder.png" alt="Nina hahmo">
+    </div>
+</header>
+
+<section id="animaatio" class="section">
+    <h2>ANIMAATIO</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oVaMvVW3-Fo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="grid">
+        <div class="grid-item">
+            <div class="box"></div>
+            <p>Animaatio-01</p>
+        </div>
+        </div>
+</section>
+
+<section id="nina" class="section">
+    <h2>NINA</h2>
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'Taidot')">Taidot</button>
+            <button class="tab-link" onclick="openTab(event, 'Tyohistoria')">Työhistoria</button>
+            <button class="tab-link" onclick="openTab(event, 'Koulutus')">Koulutus</button>
+            <button class="tab-link contact-tab" onclick="openTab(event, 'Yhteystiedot')">Yhteystiedot</button>
+        </div>
+        <div id="Taidot" class="tab-content show">
+            <p>Hei, olen Nina Lehtinen...</p>
+        </div>
+        <div id="Yhteystiedot" class="tab-content">
+            <p>Sähköposti: nina.bjorkgren@gmail.com</p>
+            <p>Puhelin: 044 9747 136</p>
+        </div>
+    </div>
+</section>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
