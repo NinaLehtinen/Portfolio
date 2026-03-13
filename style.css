@@ -38,6 +38,14 @@ nav {
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
+    /* Lisätty transition pehmeää efektiä varten */
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* UUSI: Hover-efekti menu-nappeihin */
+.nav-right a:hover {
+    color: #000000;      /* Teksti muuttuu mustaksi */
+    font-weight: 700;    /* Teksti muuttuu paksuksi (700 = Bold) */
 }
 
 /* 3. HERO-OSIO (Etusivun asettelu) */
