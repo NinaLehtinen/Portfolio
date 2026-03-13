@@ -131,4 +131,28 @@ h1 {
         flex-direction: column; 
         gap: 20px; 
     }
+
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.placeholder-box {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Tekee ruudusta videon muotoisen */
+    background-color: #ddd;
+    border: 2px dashed #999;
+}
+
+.work-sample {
+    text-align: center;
+    text-decoration: none;
+}
+
+.work-sample p {
+    margin-top: 10px;
+    font-weight: bold;
+}
 }
