@@ -1,67 +1,124 @@
-<style>
-        /* Perusasetukset */
-       body {
+/* 1. PERUSASETUKSET */
+body {
     background-color: #90cce2;
     margin: 0;
     padding: 0;
     color: white;
-    /* TÄSSÄ KÄYTETÄÄN NYT BARLOWIA */
-    font-family: 'Barlow Condensed', sans-serif; 
-    font-weight: 300; /* Kevyt ja tyylikäs */
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
 }
 
-.nav-right a, .hero-sub {
-    font-family: 'Barlow Condensed', sans-serif;
-    letter-spacing: 0.5px;
-}/* VARMISTA ETTÄ TÄMÄ SULKU ON TÄSSÄ */
+/* 2. NAVIGAATIO */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
 
-        .brand-text {
-            font-family: "salted", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 24px;
-        }
+.brand-text {
+    font-family: "salted", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
 
-        /* Hero-osio */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 50px 100px;
-            height: 70vh;
-        }
+.nav-right {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        h1 {
-            font-family: "salted", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 100px;
-            margin: 0;
-            line-height: 0.8;
-            margin-bottom: 25px;
-        }
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
-        .hero-sub {
-            max-width: 500px;
-            font-size: 20px;
-            line-height: 1.4;
-        }
+/* 3. HERO-OSIO (Etusivun asettelu) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 100px;
+    min-height: 70vh;
+}
 
-        /* Nappi */
-        .cta-button {
-            display: inline-block;
-            background-color: #fcff00;
-            color: black;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 25px;
-            transition: 0.3s;
-        }
+.hero-text {
+    max-width: 550px;
+}
 
-        .cta-button:hover {
-            background-color: #ff7cb3;
-            transform: scale(1.1);
-        }
-    </style>
+h1 {
+    font-family: "salted", sans-serif;
+    font-weight: 400;
+    font-size: clamp(60px, 10vw, 100px);
+    margin: 0;
+    line-height: 0.85;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-sub {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+/* 4. NAPPI JA ANIMAATIO */
+.cta-button {
+    display: inline-block;
+    background-color: #fcff00;
+    color: black;
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-button:hover {
+    background-color: #ff7cb3;
+    transform: scale(1.1);
+    color: white;
+}
+
+/* 5. KUVA-ALUE */
+.hero-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+.placeholder-box {
+    width: 350px;
+    height: 350px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* 6. MOBIILISÄÄDÖT (Responsiivisuus) */
+@media (max-width: 900px) {
+    .hero { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 40px 20px; 
+    }
+    .hero-image { 
+        margin-top: 40px; 
+    }
+    nav { 
+        flex-direction: column; 
+        gap: 20px; 
+    }
+}
