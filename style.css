@@ -52,7 +52,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center; /* Changed from space-around to center */
-    gap: 80px;
+    gap: 120px;
     padding: 50px 100px;
     min-height: 70vh;
 }
