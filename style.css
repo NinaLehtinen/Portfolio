@@ -1,115 +1,68 @@
-:root {
-    --bg-color: #90cce2;
-    --btn-color: #fcff00;
-    --btn-hover: #ff7cb3;
-}
+<style>
+        /* Perusasetukset */
+        body {
+            background-color: #90cce2 !important; /* Pakotetaan väri */
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: "gill-sans-mt-condensed", sans-serif;
+        }
 
-body {
-    background-color: var(--bg-color);
-    margin: 0;
-    color: white;
-    font-family: 'Gill Sans MT Condensed', sans-serif; /* Korvike */
-}
+        /* Navigaatio */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        } /* VARMISTA ETTÄ TÄMÄ SULKU ON TÄSSÄ */
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    align-items: center;
-}
+        .brand-text {
+            font-family: "salted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 24px;
+        }
 
-.brand-text {
-    font-family: "salted", sans-serif; /* Päivitetty */
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    letter-spacing: 1px;
-}
+        /* Hero-osio */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px 100px;
+            height: 70vh;
+        }
 
-.nav-right {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+        h1 {
+            font-family: "salted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 100px;
+            margin: 0;
+            line-height: 0.8;
+            margin-bottom: 25px;
+        }
 
-.nav-right a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .hero-sub {
+            max-width: 500px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
 
-.hero {
-    display: flex;
-    padding: 50px;
-    align-items: center;
-    min-height: 80vh;
-}
+        /* Nappi */
+        .cta-button {
+            display: inline-block;
+            background-color: #fcff00;
+            color: black;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
 
-.hero-content {
-    flex: 1;
-}
-
-h1 {
-    font-family: "salted", sans-serif; /* Päivitetty */
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100px;
-    margin: 0;
-    line-height: 0.8;
-    margin-bottom: 25px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--btn-color);
-    color: black;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--btn-hover);
-    transform: scale(1.1);
-}
-
-/* Tabit Nina-sivulle */
-.tabs-container {
-    background: white;
-    color: black;
-    border-radius: 30px;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.tab-link {
-    background: none;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.tab-link.active {
-    background: #eee;
-    font-weight: bold;
-}
-
-.contact-tab {
-    background-color: #f37021;
-    color: white;
-    border: none;
-}
-
-.tab-content {
-    display: none;
-    padding-top: 20px;
-}
-
-.tab-content.show {
-    display: block;
-}
+        .cta-button:hover {
+            background-color: #ff7cb3;
+            transform: scale(1.1);
+        }
+    </style>
