@@ -1,20 +1,19 @@
 <style>
         /* Perusasetukset */
-        body {
-            background-color: #90cce2 !important; /* Pakotetaan väri */
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: "gill-sans-mt-condensed", sans-serif;
-        }
+       body {
+    background-color: #90cce2;
+    margin: 0;
+    padding: 0;
+    color: white;
+    /* TÄSSÄ KÄYTETÄÄN NYT BARLOWIA */
+    font-family: 'Barlow Condensed', sans-serif; 
+    font-weight: 300; /* Kevyt ja tyylikäs */
+}
 
-        /* Navigaatio */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-        } /* VARMISTA ETTÄ TÄMÄ SULKU ON TÄSSÄ */
+.nav-right a, .hero-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.5px;
+}/* VARMISTA ETTÄ TÄMÄ SULKU ON TÄSSÄ */
 
         .brand-text {
             font-family: "salted", sans-serif;
