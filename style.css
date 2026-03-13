@@ -14,13 +14,20 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 40px; /* Hieman tiivistetty pystysuunnassa */
+}
+
+/* LOGON KOKO - Tässä säädetään kuvan kokoa */
+nav img {
+    height: 100px; /* Nostettu reilusti (oli n. 50-60px) */
+    width: auto;
+    display: block;
 }
 
 .brand-text {
     font-family: "salted", sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 32px; /* Suurennettu tekstilogoa */
     letter-spacing: 1px;
 }
 
@@ -44,31 +51,35 @@ nav {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 50px 100px;
-    min-height: 70vh;
+    justify-content: center; /* Keskittää sisällön */
+    gap: 60px; /* Väli tekstin ja kuvan välillä */
+    padding: 50px 8%;
+    min-height: 80vh;
 }
 
 .hero-text {
-    max-width: 1000px;
+    flex: 1;
+    max-width: 1000px; /* Sallii tekstin levitä reilusti */
 }
 
 h1 {
     font-family: "salted", sans-serif;
     font-weight: 400;
-    font-size: clamp(50px, 7vw, 90px);
+    /* Fontti skaalautuu, mutta pysyy yhdellä rivillä */
+    font-size: clamp(45px, 7vw, 95px); 
     margin: 0;
-    line-height: 0.85;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    white-space: nowrap;
-    overflow: visible;
+    white-space: nowrap; /* PAKOTTAA NIMEN YHDELLE RIVILLE */
 }
 
+/* LEIPÄTEKSTI (hero-sub) */
 .hero-sub {
-    font-size: 26px;
+    font-size: 26px; /* Suurennettu 22px -> 26px */
     line-height: 1.4;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    max-width: 700px; /* Pitää tekstin luettavana */
 }
 
 /* 4. NAPPI JA ANIMAATIO */
@@ -76,11 +87,11 @@ h1 {
     display: inline-block;
     background-color: #fcff00;
     color: black;
-    padding: 16px 40px;
+    padding: 18px 45px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -91,36 +102,6 @@ h1 {
 }
 
 /* 5. KUVA-ALUE */
-.hero-image img {
-    max-width: 500px;
-    height: auto;
-}
-
-.placeholder-box {
-    width: 350px;
-    height: 350px;
-    border: 2px dashed rgba(255,255,255,0.5);
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    font-style: italic;
-}
-
-/* 6. MOBIILISÄÄDÖT (Responsiivisuus) */
-@media (max-width: 900px) {
-    .hero { 
-        flex-direction: column; 
-        text-align: center; 
-        padding: 40px 20px; 
-    }
-    .hero-image { 
-        margin-top: 40px; 
-    }
-    nav { 
-        flex-direction: column; 
-        gap: 20px; 
-    }
+.hero-image {
+    flex: 0 0 auto;
 }
