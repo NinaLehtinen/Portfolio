@@ -4,81 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nina Lehtinen | Visuaalinen moniosaaja</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /* Perusasetukset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #90cce2;
+            color: white;
+            font-family: 'Gill Sans MT Condensed', sans-serif; /* Käytetään tätä kunnes Salted on ladattu */
+            overflow-x: hidden;
+        }
+
+        /* Navigaatio */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .home-icon {
+            width: 45px; /* Säädä logon kokoa tästä */
+            cursor: pointer;
+        }
+
+        .brand-text {
+            font-size: 24px;
+            letter-spacing: 1px;
+            /* Tähän tulee Salted fontti myöhemmin */
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .nav-right a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero-osio */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 100px;
+            height: 80vh;
+        }
+
+        .hero-text {
+            max-width: 500px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        h1 {
+            font-size: 100px;
+            margin: 0;
+            line-height: 0.8;
+            margin-bottom: 25px;
+        }
+
+        .hero-sub {
+            font-size: 22px;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+
+        /* Nappi ja animaatiot */
+        .cta-button {
+            display: inline-block;
+            background-color: #fcff00;
+            color: black;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .cta-button:hover {
+            background-color: #ff7cb3;
+            transform: scale(1.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Kuvaosio */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero-image img {
+            max-width: 600px;
+            height: auto;
+        }
+
+        /* Animaatiomääritykset */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsiivisuus mobiilille */
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; padding: 40px; text-align: center; height: auto; }
+            .hero-image { justify-content: center; margin-top: 40px; }
+            h1 { font-size: 60px; }
+        }
+    </style>
 </head>
 <body>
 
 <nav>
     <div class="nav-left">
-        <img src="logo-placeholder.png" alt="Logo" class="home-icon">
+        <img src="logo.png" alt="Koti" class="home-icon" onclick="window.location.reload();">
         <span class="brand-text">VISUAALISEN VIESTINNÄN MONIOSAAJA</span>
     </div>
     <ul class="nav-right">
-        <li><a href="#animaatio">ANIMAATIO</a></li>
-        <li><a href="#kuvitus">KUVITUS</a></li>
-        <li><a href="#nina">NINA</a></li>
+        <li><a href="animaatio.html">ANIMAATIO</a></li>
+        <li><a href="kuvitus.html">KUVITUS</a></li>
+        <li><a href="nina.html">NINA</a></li>
     </ul>
 </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>NINA LEHTINEN</h1>
-        <p class="hero-sub">Terve! Olen visuaalinen tarinankertoja ja animaattori Oulusta. Rakastan luoda sympaattisen hupsuja hahmoja ja tuoda heidän persoonat eloon liikkeen avulla...</p>
+<div class="hero">
+    <div class="hero-text">
+        <h1>NINA<br>LEHTINEN</h1>
+        <p class="hero-sub">
+            Terve! Olen visuaalinen tarinankertoja ja animaattori Oulusta. Rakastan luoda sympaattisen hupsuja hahmoja ja tuoda heidän persoonat eloon liikkeen avulla. Kuvitustyylini on kuitenkin monipuolinen ja luon asiakkaiden tarpeiden mukaan juuri heille sopivaa materiaalia. Tuotan somesisältöä niin tekstin, kuvan kuin videoiden muodossa.
+        </p>
         <a href="https://www.youtube.com/watch?v=oVaMvVW3-Fo" target="_blank" class="cta-button">KATSO SHOWREEL</a>
     </div>
+    
     <div class="hero-image">
-        <img src="hahmo-placeholder.png" alt="Nina hahmo">
+        <img src="etusivu-hahmo.png" alt="Nina hahmo ja puhekuplat" onerror="this.style.opacity='0.3'">
     </div>
-</header>
-
-<section id="animaatio" class="section">
-    <h2>ANIMAATIO</h2>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oVaMvVW3-Fo" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="grid">
-        <div class="grid-item">
-            <div class="box"></div>
-            <p>Animaatio-01</p>
-        </div>
-        </div>
-</section>
-
-<section id="nina" class="section">
-    <h2>NINA</h2>
-    <div class="tabs-container">
-        <div class="tabs">
-            <button class="tab-link active" onclick="openTab(event, 'Taidot')">Taidot</button>
-            <button class="tab-link" onclick="openTab(event, 'Tyohistoria')">Työhistoria</button>
-            <button class="tab-link" onclick="openTab(event, 'Koulutus')">Koulutus</button>
-            <button class="tab-link contact-tab" onclick="openTab(event, 'Yhteystiedot')">Yhteystiedot</button>
-        </div>
-        <div id="Taidot" class="tab-content show">
-            <p>Hei, olen Nina Lehtinen...</p>
-        </div>
-        <div id="Yhteystiedot" class="tab-content">
-            <p>Sähköposti: nina.bjorkgren@gmail.com</p>
-            <p>Puhelin: 044 9747 136</p>
-        </div>
-    </div>
-</section>
-
-<script>
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tab-link");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
+</div>
 
 </body>
 </html>
