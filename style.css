@@ -61,11 +61,12 @@ h1 {
     line-height: 0.85;
     margin-bottom: 20px;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .hero-sub {
-    font-size: 22px;
-    line-height: 1.3;
+    font-size: 26px;
+    line-height: 1.4;
     margin-bottom: 30px;
 }
 
